@@ -1,38 +1,211 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.register-photo {
+    background:#f1f7fc;
+    padding:5px 0;
+    overflow: hidden;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .alignbtn-ezra{
+    display: flex;
+    justify-content: space-between;
   }
-  to {
-    transform: rotate(360deg);
+  .register-photo .image-holder .ezra-btn{
+    position: absolute;
+    width: 106px;
+    height: 36px;
+    right: 20px;
+    top: 3.93%;
+    top: 6.93%;
+    bottom: 93.26%;
+    z-index: 1;
+    color: black; /* Set the desired color for the text */
+    font-size: 18px; /* Set the desired font size */
+    background: #F8F9FA;
+    border: 1px solid #F8F9FA;
+    border-radius: 4px;
   }
+  .register-photo .image-holder .ezra-logo{
+    position: absolute;
+    width: 104px;
+    height: 29px;
+    left: 2.78%;
+    right: 95.31%;
+top: 3.93%;
+bottom: 93.26%;
+    z-index: 1;
+    color: black; /* Set the desired color for the text */
+    font-size: 24px; /* Set the desired font size */
+    background: #FF5A5F;
+  }
+  .register-photo .image-holder img {
+    height: 100%;
+    width: 100%;
 }
+  
+  .register-photo .image-holder {
+    position: relative;
+    display: table-cell;
+    width: 60%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media (max-width: 768px) {
+    .register-photo .form-container .image-holder{
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px){
+    .register-photo .form-container {
+      display: flex;
+      max-width: 700px;
+      width: 100% !important;
+      height: 100%;
+      margin: 0 auto;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  }
+  }
+  @media (min-width: 1200px) and (max-width: 1500px){
+    .register-photo .form-container {
+      display: flex;
+      max-width: 900px;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  }
+  }
+  @media (min-width: 1501px) and (max-width: 2200px){
+    .register-photo .form-container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  }
+  }
+  .register-photo .form-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+  .register-photo form {
+    display:table-cell;
+    width:400px;
+    background-color:#ffffff;
+    padding:40px 60px;
+    color:#505e6c;
+  }
+  
+  @media (max-width:768px) {
+    .register-photo form {
+      padding:40px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  
+  .register-photo form h2 {
+    font-size: 36px;
+    line-height: 48.6px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Satoshi", sans-serif;
+    color: #393939;
+}
+.login-para{
+  font-family: "Satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21.6px;
+    text-align: center;
+    padding: 0px;
+height: 22px;
+}
+  /* label */
+  .login-label{
+  font-family: 'Satoshi';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+}
+.form-group{
+  margin: 15px 0px;
+}
+  /* Input */
+  .register-photo form .form-control {
+    background: #FFFFFF;
+    border: 1px solid #393939;
+    border-radius: 4.8px;
+    box-shadow: none;
+    /* outline: none; */
+    color: inherit;
+    text-indent: 8px;
+    height: 40px;
+    width: 100%;
+    margin: 6px 0;
+  }
+  
+  .register-photo form .form-check {
+    font-size:13px;
+    line-height:20px;
+  }
+  
+  .register-photo form .btn-primary {
+    background: #FF5A5F;
+    border: 1px solid #FF5A5F;
+    border-radius: 10px;
+    width: 100%;
+    padding:11px;
+    box-shadow:none;
+    text-shadow:none;
+    outline:none !important;
+    color: #ffffff;
+  }
+  
+  .register-photo form .btn-primary:hover, .register-photo form .btn-primary:active {
+    background:#eb3b60;
+  }
+  
+  .register-photo form .btn-primary:active {
+    transform:translateY(1px);
+  }
+  
+  .register-photo form .already {
+    display:block;
+    text-align:center;
+    font-size:12px;
+    color:#6f7a85;
+    opacity:0.9;
+    text-decoration:none;
+  }
+  .password-input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  @media (max-width: 767px) {
+    .password-input-wrapper {
+      display: block;
+    }
+  
+    .password-toggle {
+      top: 10px;
+      right: 10px;
+    }
+  }
+  
