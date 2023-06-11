@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import bg1 from '../bg-1.jpg';
 import bg2 from '../onboarding.png';
-import bg3 from '../onboard.png';
+import ezralogo from '../assests/ezralogo.svg';
+import bg1 from '../assests/onboarding.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function PasswordInput({ value, onChange }) {
     const [showPassword, setShowPassword] = useState(false);
@@ -29,6 +31,7 @@ function PasswordInput({ value, onChange }) {
 }
 
 function LoginForm() {
+
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
@@ -44,13 +47,33 @@ function LoginForm() {
     return (
         <div className="register-photo">
             <div className="form-container">
-                {/* <div className="image-holder" style={{ backgroundImage: `url(${bg2})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}> */}
                 <div className="image-holder">
-                    <img src={bg2} alt="" />
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src={bg1} class="d-block w-100" alt="..." className='sliderimg' />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" class="d-block w-100" alt="..." className='sliderimg' />
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                     <div className='alignbtn-ezra'>
-                        <p className='ezra-logo'>
-                            ezra
-                        </p>
+                        <div className='ezra-logo'>
+                            <img src={ezralogo} alt='Ezra Logo' />
+                        </div>
                         <button className='ezra-btn'>Contact us</button>
                     </div>
                 </div>
