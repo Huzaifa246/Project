@@ -59,7 +59,6 @@
   @media (min-width: 768px) and (max-width: 1200px){
     .register-photo .form-container {
       display: flex;
-      max-width: 700px;
       width: 100% !important;
       height: 100%;
       margin: 0 auto;
@@ -97,18 +96,38 @@
     display:table-cell;
     width:50%;
     background-color:#ffffff;
-    padding:40px 60px;
+    padding: 50px 80px;
     color:#505e6c;
   }
   
-  @media (max-width:768px) {
+  @media (min-width:650px) and (max-width:768px) {
     .register-photo form {
       padding:40px;
       margin: 0 auto;
       text-align: center;
+      justify-content: center;
+      width: 70%;
+    }
+  }
+  @media (min-width:450px) and (max-width:649px) {
+    .register-photo form {
+      padding:40px;
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+      width: 80%;
     }
   }
   
+  @media (max-width:449px) {
+    .register-photo form {
+      padding:40px;
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
   .register-photo form h2 {
     font-size: 36px;
     line-height: 48.6px;
