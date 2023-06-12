@@ -50,8 +50,8 @@ function LoginForm() {
                 <div className="image-holder">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active rounded-pill rounded-button" aria-current="true" aria-label="Slide 1" style={{ height: "10px", width: "10px" }}></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="rounded-pill rounded-button" aria-label="Slide 2" style={{ height: "10px", width: "10px", borderRadius: "50%" }}></button>
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -61,14 +61,15 @@ function LoginForm() {
                                 <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" class="d-block w-100" alt="..." className='sliderimg' />
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        {/* Left right arrows */}
+                        {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                        </button>
+                        </button> */}
                     </div>
                     <div className='alignbtn-ezra'>
                         <div className='ezra-logo'>
@@ -77,75 +78,79 @@ function LoginForm() {
                         <button className='ezra-btn'>Contact us</button>
                     </div>
                 </div>
-                <form onSubmit={handleSubmit}>
-                    <h2 className="text-center">
-                        <strong>Log in</strong> your account
-                    </h2>
-                    <p className='login-para'>Welcome back! Please enter your details.</p>
-                    <div className="form-group">
-                        <label htmlFor="name" className='login-label'>Name:</label>
-                        <input
-                            className="form-control"
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email" className='login-label'>Email:</label>
-                        <input
-                            className="form-control"
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password" className='login-label'>Password:</label>
-                        <PasswordInput
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password" className='login-label'>Re-Enter Password:</label>
-                        <input
-                            className="form-control"
-                            type="password"
-                            name="password-repeat"
-                            placeholder="Password (repeat)"
-                            value={passwordRepeat}
-                            onChange={(e) => setPasswordRepeat(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <div className="form-check">
-                            <label className="form-check-label">
-                                <input
-                                    className="form-check-input"
-                                    type="checkbox"
-                                    checked={agreed}
-                                    onChange={(e) => setAgreed(e.target.checked)}
-                                />
-                                I agree to the license terms.
-                            </label>
+                <div className='main-form'>
+                    <form onSubmit={handleSubmit}>
+                        <h2 className="text-center">
+                            <strong>Log in</strong> your account
+                        </h2>
+                        <p className='login-para'>Welcome back! Please enter your details.</p>
+                        <div className="form-group">
+                            <label htmlFor="name" className='login-label'>Name:</label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                name="name"
+                                placeholder="Name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
                         </div>
+                        <div className="form-group">
+                            <label htmlFor="email" className='login-label'>Email:</label>
+                            <input
+                                className="form-control"
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password" className='login-label'>Password:</label>
+                            <PasswordInput
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password" className='login-label'>Re-Enter Password:</label>
+                            <input
+                                className="form-control"
+                                type="password"
+                                name="password-repeat"
+                                placeholder="Password (repeat)"
+                                value={passwordRepeat}
+                                onChange={(e) => setPasswordRepeat(e.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <div className="form-check">
+                                <label className="form-check-label">
+                                    <input
+                                        className="form-check-input"
+                                        type="checkbox"
+                                        checked={agreed}
+                                        onChange={(e) => setAgreed(e.target.checked)}
+                                    />
+                                    I agree to the license terms.
+                                </label>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <button className="btn btn-primary btn-block" type="submit">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                    <div className="already">
+                        <a href="#">
+                            You already have an account? Login here.
+                        </a>
                     </div>
-                    <div className="form-group">
-                        <button className="btn btn-primary btn-block" type="submit">
-                            Sign Up
-                        </button>
-                    </div>
-                    <a href="#" className="already">
-                        You already have an account? Login here.
-                    </a>
-                </form>
+                </div>
             </div>
-        </div>
+        </div >
     );
 }
 
