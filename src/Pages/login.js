@@ -143,11 +143,12 @@ function LoginForm() {
                             </button>
                         </div>
                     </form>
-                    <div className="already">
-                        <a href="#">
-                            You already have an account? Login here.
-                        </a>
-                    </div>
+
+                </div>
+                <div className="already">
+                    <a href="#">
+                        You already have an account? Login here.
+                    </a>
                 </div>
             </div>
         </div >

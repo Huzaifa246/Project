@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .rounded-button.active {
   background-color: orange !important; 
   border-radius: 50% !important;
@@ -9,10 +15,12 @@
   overflow: hidden;
   position: relative; /* Add this line */
 }
+/* MAIN CONTAINER FOR BOTH EZRA AND CONTACT US BTN */
   .alignbtn-ezra{
     display: flex;
     justify-content: space-between;
   }
+  /* CONTACT US BTN */
   .register-photo .image-holder .ezra-btn {
     position: absolute;
     width: 106px;
@@ -26,7 +34,7 @@
     border: 1px solid #F8F9FA;
     border-radius: 4px;
 }
-
+/* EZRA LOGO HY */
 .register-photo .image-holder .ezra-logo {
     position: absolute;
     width: 104px;
@@ -70,6 +78,8 @@
       height: 100%;
       margin: 0 auto;
       box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      align-items: center;
+      justify-content: center;
   }
   }
   @media (min-width: 1200px) and (max-width: 1500px){
@@ -79,6 +89,8 @@
       height: 100%;
       margin: 0 auto;
       box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      align-items: center;
+      justify-content: center;
   }
   }
   @media (min-width: 1501px) and (max-width: 2200px){
@@ -111,7 +123,7 @@
   }
   
   @media (min-width:650px) and (max-width:768px) {
-    .register-photo form {
+    .register-photo .main-form {
       padding:40px;
       margin: 0 auto;
       text-align: center;
@@ -119,18 +131,19 @@
       width: 70%;
     }
   }
+  
   @media (min-width:450px) and (max-width:649px) {
-    .register-photo form {
+    .register-photo .main-form {
       padding:40px;
       margin: 0 auto;
       text-align: center;
       justify-content: center;
-      width: 80%;
+      width: 80% !important;
     }
   }
   
   @media (max-width:449px) {
-    .register-photo form {
+    .register-photo .main-form {
       padding:40px;
       margin: 0 auto;
       text-align: center;
@@ -138,7 +151,7 @@
       width: 100%;
     }
   }
-  .register-photo form h2 {
+  .register-photo .main-form h2 {
     font-size: 36px;
     line-height: 48.6px;
     margin-bottom: 30px;
@@ -164,11 +177,12 @@ font-weight: 400;
 font-size: 16px;
 line-height: 22px;
 }
+/* input fields ky darmeyan margin */
 .form-group{
   margin: 15px 0px;
 }
   /* Input */
-  .register-photo form .form-control {
+  .register-photo .main-form .form-control {
     background: #FFFFFF;
     border: 1px solid #393939;
     border-radius: 4.8px;
@@ -181,12 +195,12 @@ line-height: 22px;
     margin: 6px 0;
   }
   
-  .register-photo form .form-check {
+  .register-photo .main-form .form-check {
     font-size:13px;
     line-height:20px;
   }
-  
-  .register-photo form .btn-primary {
+  /* BUTTON */
+  .register-photo .main-form .btn-primary {
     background: #FF5A5F;
     border: 1px solid #FF5A5F;
     border-radius: 10px;
@@ -198,23 +212,27 @@ line-height: 22px;
     color: #ffffff;
   }
   
-  .register-photo form .btn-primary:hover, .register-photo form .btn-primary:active {
+  .register-photo .main-form .btn-primary:hover, .register-photo .main-form .btn-primary:active {
     background:#eb3b60;
   }
   
-  .register-photo form .btn-primary:active {
+  .register-photo .main-form .btn-primary:active {
     transform:translateY(1px);
   }
   
-  .register-photo .main-form .already {
-    display: block;
+  .already {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    right: 100px;
     text-align: center;
     font-size: 12px;
     color: #6f7a85;
     opacity: 0.9;
     text-decoration: none;
-    margin-top: auto;
   }
+
+  /* EYE KE STYLINGs */
   .password-input-wrapper {
     position: relative;
     display: inline-block;
