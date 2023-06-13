@@ -69,6 +69,25 @@
     .register-photo .form-container .image-holder{
       display: none;
     }
+    .register-photo .form-container .right-container {
+      display: flex;
+      width: 100% !important;
+      height: 100%;
+      margin: 0 auto;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      align-items: center;
+    }
+    .register-photo .form-container .already{
+    position: absolute;
+    bottom: 60px;
+    left: 0px;
+    right: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #6f7a85;
+    opacity: 0.9;
+    text-decoration: none;
+}
   }
 
   @media (min-width: 768px) and (max-width: 1200px){
@@ -79,7 +98,6 @@
       margin: 0 auto;
       box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
       align-items: center;
-      justify-content: center;
   }
   }
   @media (min-width: 1200px) and (max-width: 1500px){
@@ -90,7 +108,6 @@
       margin: 0 auto;
       box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
       align-items: center;
-      justify-content: center;
   }
   }
   @media (min-width: 1501px) and (max-width: 2200px){
@@ -109,17 +126,23 @@
     margin: 0 auto;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
     align-items: center; /* Add this line */
-    justify-content: center; /* Add this line */
 }
   .register-photo .main-form {
     position: relative;
     display:table-cell;
-    width:40%;
+    width:60%;
     background-color:#ffffff;
-    padding: 20px 16px;
+    padding: 20px 16px 0px 16px;
     color:#505e6c;
-    margin: 250px 165px 60px 175px;
+    margin: 250px 165px 150px 170px;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2), 0px 1px 11px rgba(0, 0, 0, 0.2)
+  }
+  .right-container{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
   }
   
   @media (min-width:650px) and (max-width:768px) {
@@ -187,7 +210,6 @@ line-height: 22px;
     border: 1px solid #393939;
     border-radius: 4.8px;
     box-shadow: none;
-    /* outline: none; */
     color: inherit;
     text-indent: 8px;
     height: 40px;
@@ -253,7 +275,7 @@ line-height: 22px;
     }
   
     .password-toggle {
-      top: 10px;
+      top: 50%;
       right: 10px;
     }
   }
