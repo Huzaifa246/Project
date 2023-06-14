@@ -238,7 +238,7 @@
 }
 /* input fields ky darmeyan margin */
 .form-group {
-  margin: 15px 0px;
+  margin: 16px 0px;
 }
 /* Input */
 .register-photo .main-form .form-control {
@@ -248,9 +248,9 @@
   box-shadow: none;
   color: inherit;
   text-indent: 8px;
-  height: 40px;
+  height: 48px;
   width: 100%;
-  margin: 6px 0;
+  margin: 8px 0;
 }
 
 .register-photo .main-form .form-check {

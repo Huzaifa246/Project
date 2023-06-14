@@ -104,7 +104,7 @@
   }
   .register-photo .main-form {
     padding: 20px 16px 0px 16px !important;
-    margin: 250px 110px 250px 110px !important;
+    margin: 250px 110px 150px 110px !important;
   }
   .register-photo .image-holder {
     width: 50% !important;
@@ -121,7 +121,7 @@
   .register-photo .main-form {
     width: 50% !important;
     padding: 20px 16px 0px 16px !important;
-    margin: 250px 100px 250px 100px !important;
+    margin: 250px 100px 150px 100px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -171,14 +171,15 @@
   background-color: #ffffff;
   padding: 20px 16px 0px 16px;
   color: #505e6c;
-  margin: 250px 165px 290px 170px;
+  margin: 250px 165px 150px 170px;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2), 0px 1px 11px rgba(0, 0, 0, 0.2);
 }
 .right-container {
   height: 100%;
-  width: 55%;
+  width: 50%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 650px) and (max-width: 768px) {
@@ -318,7 +319,7 @@
 }
 
 .already .row {
-  width: 360;
+  width: 330px;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -329,22 +330,72 @@
   font-size: 20px;
   line-height: 150%;
   color: rgba(108, 117, 125, 1);
-  display: inline;
-  padding-right: 0%;
+  padding-left: 4px;
 }
 
 .already .row .clickable-text {
   font-size: 20px;
   line-height: 150%;
   color: rgba(255, 90, 95, 1);
-  display: inline;
+  padding: 0%;
 }
 
-row > * {
-  flex-shrink: 0;
-  /* width: 100%; */
-  max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
+.content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+  color: rgba(35.06, 34.77, 34.84, 1);
+}
+
+.spacer {
+  height: 22px;
+}
+
+.description {
+  width: 374px;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: rgba(35.06, 34.77, 34.84, 1);
+}
+
+.progress-bar {
+  width: 400px;
+  height: 16px;
+  background-color: rgba(233, 236, 239, 1);
+  border-radius: 4px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.progress-fill {
+  transform: rotate(180deg);
+  width: 100px;
+  height: 100%;
+}
+
+.progress-bar > div {
+  transform: rotate(-180deg);
+  height: 100%;
+  width: 25%;
+  background-color: rgba(255, 90, 95, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.progress-fill > div > div {
+  width: 0px;
+  height: 0px;
 }

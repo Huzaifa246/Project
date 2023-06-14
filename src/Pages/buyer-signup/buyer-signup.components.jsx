@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import bg2 from "../onboarding.png";
-import ezralogo from "../assests/ezralogo.svg";
-import bg1 from "../assests/onboarding.svg";
+import ezralogo from "../../assests/ezralogo.svg";
+import bg1 from "../../assests/onboarding.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -30,7 +29,7 @@ function PasswordInput({ value, onChange }) {
   );
 }
 
-function LoginForm() {
+function BuyerSignupForm() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -99,7 +98,7 @@ function LoginForm() {
         <div className="right-container">
           <div className="main-form">
             <form onSubmit={handleSubmit}>
-              <h1 className="text-center">Log in your account</h1>
+              <h2>Sign up to your account</h2>
               <p className="login-para">
                 Welcome back! Please enter your details.
               </p>
@@ -138,10 +137,9 @@ function LoginForm() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-
               <div className="form-group">
                 <button className="btn btn-primary btn-block" type="submit">
-                  Login
+                  Next Step
                 </button>
               </div>
             </form>
@@ -149,8 +147,8 @@ function LoginForm() {
         </div>
         <div className="already">
           <div className="row">
-            <p className="already-text">Don’t have an account?</p>
-            <p className="clickable-text">Sign up</p>
+            <p className="already-text">Already have an account?</p>
+            <p className="clickable-text">Log In</p>
           </div>
         </div>
       </div>
@@ -158,4 +156,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default BuyerSignupForm;

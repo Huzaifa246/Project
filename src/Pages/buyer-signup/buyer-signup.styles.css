@@ -104,7 +104,7 @@
   }
   .register-photo .main-form {
     padding: 20px 16px 0px 16px !important;
-    margin: 250px 110px 250px 110px !important;
+    margin: 250px 110px 200px 110px !important;
   }
   .register-photo .image-holder {
     width: 50% !important;
@@ -121,7 +121,7 @@
   .register-photo .main-form {
     width: 50% !important;
     padding: 20px 16px 0px 16px !important;
-    margin: 250px 100px 250px 100px !important;
+    margin: 250px 100px 200px 100px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -171,7 +171,7 @@
   background-color: #ffffff;
   padding: 20px 16px 0px 16px;
   color: #505e6c;
-  margin: 250px 165px 290px 170px;
+  margin: 250px 160px 300px 160px;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2), 0px 1px 11px rgba(0, 0, 0, 0.2);
 }
 .right-container {
@@ -318,7 +318,7 @@
 }
 
 .already .row {
-  width: 360;
+  width: 330px;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -329,22 +329,12 @@
   font-size: 20px;
   line-height: 150%;
   color: rgba(108, 117, 125, 1);
-  display: inline;
-  padding-right: 0%;
+  padding-left: 4px;
 }
 
 .already .row .clickable-text {
   font-size: 20px;
   line-height: 150%;
   color: rgba(255, 90, 95, 1);
-  display: inline;
-}
-
-row > * {
-  flex-shrink: 0;
-  /* width: 100%; */
-  max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
+  padding: 0%;
 }
