@@ -7,13 +7,17 @@ import "./Pages/welcome/welcome.styles.css";
 import "./Pages/creating-account/creating-account.styles.css"
 import Welcome from "./Pages/welcome/welcome.component";
 // import "./App.css";
+import Stepper from './Pages/Stepper/stepper';
+import SignupPay from './Pages/SignUpPayment/signupPay';
 
 
 function App() {
   return (
     <>
       {/* <CreateAccount /> */}
-      <Welcome />
+      {/* <Welcome /> */}
+      {/* <Stepper /> */}
+      <SignupPay />
     </>
   );
 }
