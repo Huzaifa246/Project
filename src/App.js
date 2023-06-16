@@ -8,8 +8,8 @@ import "./Pages/creating-account/creating-account.styles.css"
 import Welcome from "./Pages/welcome/welcome.component";
 // import "./App.css";
 import Stepper from './Pages/Stepper/stepper';
-import SignupPay from './Pages/SignUpPayment/signupPay';
-
+import SignupPay from './Pages/SignUpPayment/signupay.component';
+import "./Pages/SignUpPayment/signupPay.styles.css";
 
 function App() {
   return (

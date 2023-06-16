@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import SignGrp from "../../assests/SignGrp.svg";
 import paypal from "../../assests/paypal-logo.svg";
+import Payment from "../../assests/icon.svg";
 
 function SignupPay() {
     const [email, setEmail] = useState("");
@@ -73,20 +74,17 @@ function SignupPay() {
                         </div>
                     </div>
                     <div className="right-container">
-                        {/* <div className="stepimg">
-                            <img src={SignGrp} alt="" />
-                        </div> */}
                         <div className="main-form">
                             <form onSubmit={handleSubmit}>
-                                <p className="signupPay-para">
-                                    Pay with Paypal
-                                </p>
+                                <p className="signupPay-para">Pay with Paypal</p>
                                 <div className="yellow-container">
                                     <img src={paypal} alt="" />
                                 </div>
 
+                                <h6 className="hr-lines">
+                                    <span>PEACE</span>
+                                </h6>
 
-                                <h6 class="hr-lines"> <hr />PEACE <hr /></h6>
                                 <div className="form-group">
                                     <label htmlFor="name" className="login-label">
                                         Name on Card:
@@ -100,6 +98,7 @@ function SignupPay() {
                                         onChange={(e) => setName(e.target.value)}
                                     />
                                 </div>
+
                                 <div className="form-group">
                                     <label htmlFor="email" className="login-label">
                                         Credit Card Number:
@@ -112,7 +111,38 @@ function SignupPay() {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
+                                    <img src={Payment} alt="" />
                                 </div>
+
+                                <div className="form-group input-fields-container">
+                                    <div className="expiry-date-input">
+                                        <label htmlFor="expiryDate" className="login-label">
+                                            Expiry Date:
+                                        </label>
+                                        <input
+                                            className="form-control"
+                                            type="text"
+                                            name="expiryDate"
+                                            placeholder="MM/YY"
+                                        // value={expiryDate}
+                                        // onChange={(e) => setExpiryDate(e.target.value)}
+                                        />
+                                    </div>
+                                    <div className="cvv-input">
+                                        <label htmlFor="cvv" className="login-label">
+                                            CVV:
+                                        </label>
+                                        <input
+                                            className="form-control"
+                                            type="text"
+                                            name="cvv"
+                                            placeholder="CVV"
+                                        // value={cvv}
+                                        // onChange={(e) => setCvv(e.target.value)}
+                                        />
+                                    </div>
+                                </div>
+
                                 <div className="form-group">
                                     <button className="btn btn-primary btn-block" type="submit">
                                         Next Step
@@ -121,6 +151,7 @@ function SignupPay() {
                             </form>
                         </div>
                     </div>
+
                 </div>
             </div>
         </>
