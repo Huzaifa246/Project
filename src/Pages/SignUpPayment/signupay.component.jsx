@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import Modal from "react-modal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import ezralogo from "../../assests/ezralogo.svg";
 import bg1 from "../../assests/onboarding.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,12 +18,62 @@ function SignupPay() {
     const [passwordRepeat, setPasswordRepeat] = useState("");
     const [agreed, setAgreed] = useState(false);
 
+    const [modalVisible, setModalVisible] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();
+        setModalVisible(true);
         // Perform form submission or validation logic here
     };
+
+    const modalStyles = {
+        content: {
+          top: "50%",
+          left: "50%",
+          right: "auto",
+          bottom: "auto",
+          marginRight: "-50%",
+          transform: "translate(-50%, -50%)",
+          maxWidth: "550px",
+          padding: "20px",
+        },
+      };
     return (
         <>
+<Modal
+  isOpen={modalVisible}
+  onRequestClose={() => setModalVisible(false)}
+  style={modalStyles}
+>
+  <div className="modal-header">
+    <div className="info-icon">
+      <i className="fa fa-info-circle"></i>
+    </div>
+    <h4>Save Payment Method for Future Use</h4>
+    <div className="close-button" onClick={() => setModalVisible(false)}>
+      <i className="fa fa-times"></i>
+    </div>
+  </div>
+  <div className="modal-content">
+    <p>
+      This is the modal content.
+      <br />
+      <br />
+      By saving your payment method, you can enjoy a faster checkout experience for future transactions. Your payment details will be securely stored using industry-standard encryption and will only be used to process your transactions on this platform. We do not store or have access to your full credit card number; only the necessary information for secure and convenient transactions will be stored.
+      <br />
+      <br />
+      <b>
+      Please note that you can manage and update your saved payment methods in your account settings at any time. Your privacy and data security are of utmost importance to us.
+      </b>
+    </p>
+    <div className="modal-buttons">
+      <button className="save-button">Save Payment</button>
+      <button className="cancel-button" onClick={() => setModalVisible(false)}>
+        Cancel
+      </button>
+    </div>
+  </div>
+</Modal>
+
             <div className="register-photo">
                 <div className="form-container">
                     <div className="image-holder">
@@ -144,9 +198,13 @@ function SignupPay() {
                                 </div>
 
                                 <div className="form-group">
-                                    <button className="btn btn-primary btn-block" type="submit">
-                                        Next Step
-                                    </button>
+                                <button
+    className="btn btn-primary btn-block"
+    type="submit"
+    onClick={() => setModalVisible(true)}
+>
+    Next Step
+</button>
                                 </div>
                             </form>
                         </div>
